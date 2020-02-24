@@ -6,7 +6,7 @@
 /*   By: u18188899 <u18188899@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/04 16:43:24 by klekisha          #+#    #+#             */
-/*   Updated: 2020/02/23 14:35:31 by u18188899        ###   ########.fr       */
+/*   Updated: 2020/02/23 19:52:30 by u18188899        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,7 +64,7 @@ char	*ft_strcpy_2(char *dst, const char *src)
 	return (dst);
 }
 
-int		get_next_line(const int fd, char **line)
+int		getNL(const int fd, char **line)
 {
 	static char		*fd_array[MAX_FD] = {0};
 	char			buf[BUFF_SIZE + 1];
@@ -83,6 +83,8 @@ int		get_next_line(const int fd, char **line)
 		if (!fd_array[fd])
 			return (-1);
 	}
+	if (!fd_array[fd])
+		exit(1);
 	temp13 = ft_strlen(fd_array[fd]);
 	if (!(*line = ft_strnew(temp13)))
 		return (-1);
