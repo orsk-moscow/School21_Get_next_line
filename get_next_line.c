@@ -6,7 +6,7 @@
 /*   By: u18188899 <u18188899@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/04 16:43:24 by klekisha          #+#    #+#             */
-/*   Updated: 2020/02/23 19:52:30 by u18188899        ###   ########.fr       */
+/*   Updated: 2020/03/04 18:51:27 by u18188899        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -83,8 +83,7 @@ int		getNL(const int fd, char **line)
 		if (!fd_array[fd])
 			return (-1);
 	}
-	if (!fd_array[fd])
-		exit(1);
+	fd_array[fd] = (n_bites_in_buf ? fd_array[fd] : "");
 	temp13 = ft_strlen(fd_array[fd]);
 	if (!(*line = ft_strnew(temp13)))
 		return (-1);
