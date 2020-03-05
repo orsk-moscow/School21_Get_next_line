@@ -6,7 +6,7 @@
 /*   By: u18188899 <u18188899@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/04 16:43:24 by klekisha          #+#    #+#             */
-/*   Updated: 2020/03/04 19:16:10 by u18188899        ###   ########.fr       */
+/*   Updated: 2020/03/05 19:30:26 by u18188899        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,7 +69,6 @@ int		getNL(const int fd, char **line)
 	static char		*fd_array[MAX_FD] = {0};
 	char			buf[BUFF_SIZE + 1];
 	size_t			n_bites_in_buf;
-	char			*temp12;
 	size_t			temp13;
 
 	if (fd < 0 || !line)
